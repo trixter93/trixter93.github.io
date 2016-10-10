@@ -52,7 +52,7 @@ Following is an image I have taken using <a href="http://www.sony.com.my" target
 </p>
 
 <p id="id01">I'm here</p>
-
+  <p id="id02">I'm here 2</p>
 <script>
   var xmlhttp = new XMLHttpRequest();
   var url = "http://175.143.59.215:80/info.txt";
@@ -63,7 +63,7 @@ Following is an image I have taken using <a href="http://www.sony.com.my" target
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
     } else {
-    document.getElementById("id01").innerHTML= xmlhttp.readystate;
+    document.getElementById("id02").innerHTML= xmlhttp.readystate;
     }
   };
   
