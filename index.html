@@ -56,17 +56,17 @@ Following is an image I have taken using <a href="http://www.sony.com.my" target
 <script>
   var xmlhttp = new XMLHttpRequest();
   var url = "http://175.143.59.215:80/info.txt";
+  xmlhttp.open("GET", url, true);
+  xmlhttp.send();
   xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
     } else {
-    document.getElementById("id01").innerHTML="error";
+    document.getElementById("id01").innerHTML= xmlhttp.readystate;
     }
-    
   };
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
+  
   function myFunction(arr) {
     var out = "";
     var i;
