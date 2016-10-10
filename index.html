@@ -62,7 +62,10 @@ Following is an image I have taken using <a href="http://www.sony.com.my" target
     if (this.readyState == 4 && this.status == 200) {
         var myArr = JSON.parse(this.responseText);
         myFunction(myArr);
+    } else {
+    document.getElementById("id01").innerHTML="error";
     }
+    
   };
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
